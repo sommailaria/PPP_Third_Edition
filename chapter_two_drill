@@ -1,0 +1,61 @@
+#include <iostream>
+
+// The scope of the program is to output a letter to a friend.
+// The program will first ask the user to enter the name of the person they want to write to and then outputs the first paragraphs of the letter.
+
+int main() {
+    std::string recipient_name{};
+    std::cout << "Enter the name of the person you want to write to: " << '\n';
+    std::cin >> recipient_name;
+    
+    std::cout << "Hello, " << recipient_name << '\n'
+              << "How are you? How's life going on in your corner of the world?" << '\n'
+              << "I really hope life has been treating you well. " << '\n'
+              << "Here, spring has sprung and the days are finally getting longer!" << '\n';
+    
+    //  Now we prompt the user for the name of a common friend we want to ask about:
+    
+    std::string common_friend_name{};
+    std::cout << "Enter the name of a common friend: " << '\n';
+    std::cin >> common_friend_name;
+    std::cout << "I was thinking... Have you heard from " << common_friend_name << " lately? I wonder how they have been doing. " << '\n';
+    
+    // Now we prompt for the recipient's age, and the output changes according to these condtions:
+    // If age is 0 or less or 110 or more, output "No, that can't be right";
+    // If age is under 12, output “Next year you will be age+1."
+    // If the age is 17, output  “Next year you will be able to vote."
+    // If age is over 70, output “Are you retired?” (I changed the phrasing a little bit in this case)
+    
+    int recipient_age{};
+    std::cout << "Enter recipient's age: " << '\n';
+    std::cin >> recipient_age;
+    std::cout << "I remember that it was your birthday lately, and now you are " << recipient_age << " years old." << '\n';
+    
+    if (recipient_age == 0 || recipient_age >= 110) {
+        std::cout << "No, that can't be right..." << '\n';
+    }
+    
+    else if (recipient_age < 12) {
+        std::cout << "Next year you will be " << recipient_age + 1 << " years old!" << '\n';
+        
+    }
+    
+    else if (recipient_age == 17) {
+        std::cout << "Next year you will be able to vote! " << '\n';
+    }
+    
+    else if (recipient_age == 70) {
+        std::cout << "I guess you will be retiring soon! " << '\n';
+    }
+    
+    else
+        std::cout << "I hope you had a nice birthday! " << '\n';
+    
+    
+    std::cout << " Yours sincerely, " << '\n'
+              << '\n'
+              << '\n'
+              << "Ilaria" << '\n';
+    
+    
+}
