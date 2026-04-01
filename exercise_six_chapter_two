@@ -14,7 +14,9 @@ solve this with the tools that were shown in the chapter
 
 #include <iostream>
 int main() {
-    int one{}, two{}, three{};
+    int one{}; 
+    int two{};
+    int three{};
 
     std::cout << "Please enter three integer values: " << std::endl;
     std::cin >> one >> two >> three;
